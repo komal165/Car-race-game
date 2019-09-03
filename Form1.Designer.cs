@@ -42,7 +42,6 @@
             this.BidOnCar = new System.Windows.Forms.NumericUpDown();
             this.PlaceBid = new System.Windows.Forms.Button();
             this.StartRace = new System.Windows.Forms.Button();
-            this.Car4 = new System.Windows.Forms.PictureBox();
             this.Car3 = new System.Windows.Forms.PictureBox();
             this.Car2 = new System.Windows.Forms.PictureBox();
             this.Car1 = new System.Windows.Forms.PictureBox();
@@ -50,15 +49,16 @@
             this.trackLength = new System.Windows.Forms.PictureBox();
             this.Car5 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.Car4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.BetAmount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BidOnCar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Car4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Car3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Car2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Car1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackLength)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Car5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Car4)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -183,9 +183,24 @@
             // BidOnCar
             // 
             this.BidOnCar.Location = new System.Drawing.Point(557, 474);
+            this.BidOnCar.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.BidOnCar.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.BidOnCar.Name = "BidOnCar";
             this.BidOnCar.Size = new System.Drawing.Size(120, 20);
             this.BidOnCar.TabIndex = 16;
+            this.BidOnCar.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // PlaceBid
             // 
@@ -206,16 +221,6 @@
             this.StartRace.Text = "Race";
             this.StartRace.UseVisualStyleBackColor = true;
             this.StartRace.Click += new System.EventHandler(this.StartRace_Click);
-            // 
-            // Car4
-            // 
-            this.Car4.Image = global::CarRace.Properties.Resources.RaceCarRed;
-            this.Car4.Location = new System.Drawing.Point(28, 241);
-            this.Car4.Name = "Car4";
-            this.Car4.Size = new System.Drawing.Size(50, 50);
-            this.Car4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Car4.TabIndex = 4;
-            this.Car4.TabStop = false;
             // 
             // Car3
             // 
@@ -283,6 +288,16 @@
             this.timer1.Interval = 25;
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
+            // Car4
+            // 
+            this.Car4.Image = global::CarRace.Properties.Resources.RaceCarRed;
+            this.Car4.Location = new System.Drawing.Point(28, 241);
+            this.Car4.Name = "Car4";
+            this.Car4.Size = new System.Drawing.Size(50, 50);
+            this.Car4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Car4.TabIndex = 4;
+            this.Car4.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -312,13 +327,13 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.BetAmount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BidOnCar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Car4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Car3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Car2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Car1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackLength)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Car5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Car4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,7 +345,6 @@
         private System.Windows.Forms.PictureBox Car1;
         private System.Windows.Forms.PictureBox Car2;
         private System.Windows.Forms.PictureBox Car3;
-        private System.Windows.Forms.PictureBox Car4;
         private System.Windows.Forms.PictureBox trackLength;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton radioButton1;
@@ -347,6 +361,7 @@
         private System.Windows.Forms.Button StartRace;
         private System.Windows.Forms.PictureBox Car5;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox Car4;
     }
 }
 
